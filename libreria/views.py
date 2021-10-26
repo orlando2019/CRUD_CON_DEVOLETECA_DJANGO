@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def inicio(request):
-    return HttpResponse("<h1> Bienvenido Orlando </h1>")
+    return render(request, "pages/inicio.html")
 
 
 def index(request):
@@ -12,3 +12,11 @@ def index(request):
 
 def libros(request):
     return render(request, "libros/index.html")
+
+
+def crear_libro(request):
+    return render(request, "libros/crear.html")
+
+
+def editar_libro(request):
+    return render(request, "libros/editar.html")

@@ -1,16 +1,20 @@
 {% extends 'base.html' %} {%block titulo%}Lista de libros{%endblock %} {%block contenido%}
 <div class="card mt-2">
-	<div class="card-header text-center">Listar Libros</div>
+	<div class="card-header">
+		<a name="" id="" class="btn btn-primary" href="{% url 'crear' %}" role="button"
+			>Agregar nuevo libro</a
+		>
+	</div>
 	<div class="card-body">
-		<h4 class="card-title">Libros</h4>
+		<h4 class="card-title text-center">Lista De Libros</h4>
 		<table class="table">
 			<thead class="table-dark">
 				<tr>
 					<th>ID</th>
 					<th>Título</th>
 					<th>Imagen</th>
-					<th>Descripción</th>
-					<th>Acciones</th>
+					<th class="text-center">Descripción</th>
+					<th class="text-center">Acciones</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -19,7 +23,28 @@
 					<td>Django Con Python</td>
 					<td>Imagen.jpg</td>
 					<td>Libro que habla sobre Django</td>
-					<td>Editar | Borrar</td>
+					<td>
+						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+							<a
+								name="editar"
+								id=""
+								class="btn btn-warning me-md-2"
+								href="{% url 'editar' %}"
+								title="Editar"
+								role="button"
+								><i class="fas fa-edit"></i> Editar</a
+							>
+							<a
+								name="borrar"
+								id=""
+								class="btn btn-danger"
+								href="#"
+								title="Borrar"
+								role="button"
+								><i class="fas fa-trash-alt"></i> Borrar</a
+							>
+						</div>
+					</td>
 				</tr>
 			</tbody>
 		</table>

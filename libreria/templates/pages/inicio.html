@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {%block titulo%}Inicio{%endblock %} {% block contenido %}
+<div class="p-5 bg-light">
+	<div class="container">
+		<h1 class="display-3">Bienvenido al sitio de la librería</h1>
+		<p class="lead">Empezar a ingresar libros</p>
+		<hr class="my-2" />
+
+		<p class="lead">
+		<div class="d-grid gap-2">
+			<a class="btn btn-success btn-lg" href="{% url 'libros' %}" role="button">INICIAR</a>
+		</div>
+		</p>
+	</div>
+</div>
+{%endblock %}
