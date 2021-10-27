@@ -33,3 +33,7 @@ python manage.py migrate
 ## Para crear un administrador superusuario
 
 python manage.py createsuperuser
+
+## Version de Python
+
+Python 3.9.7
