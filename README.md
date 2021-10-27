@@ -8,11 +8,11 @@ python manage.py startapp nombre_de_la_app
 
 ## Comando para arrancar requirements.txt
 
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
 ## Comando para crear requirements.txt
 
-pip freeze > requeriments.txt
+pip freeze > requirements.txt
 
 ## Para Iniciar XAMMP ejecute en linux
 
