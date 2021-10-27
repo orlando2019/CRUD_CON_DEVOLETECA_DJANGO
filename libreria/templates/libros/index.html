@@ -18,18 +18,26 @@
 				</tr>
 			</thead>
 			<tbody>
+				{% for libro in libros %}
 				<tr>
-					<td scope="row">1</td>
-					<td>Django Con Python</td>
-					<td>Imagen.jpg</td>
-					<td>Libro que habla sobre Django</td>
+					<td scope="row">{{libro.id}}</td>
+					<td>{{libro.titulo}}</td>
+					<td>
+						<img
+							src="{{libro.imagen.url}}"
+							class="rounded-circle"
+							width="60"
+							height="60"
+						/>
+					</td>
+					<td>{{libro.descripcion}}</td>
 					<td>
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 							<a
 								name="editar"
 								id=""
 								class="btn btn-warning me-md-2"
-								href="{% url 'editar' %}"
+								href="{% url 'editar' libro.id %}"
 								title="Editar"
 								role="button"
 								><i class="fas fa-edit"></i> Editar</a
@@ -38,7 +46,7 @@
 								name="borrar"
 								id=""
 								class="btn btn-danger"
-								href="#"
+								href="{% url 'eliminar' libro.id %}"
 								title="Borrar"
 								role="button"
 								><i class="fas fa-trash-alt"></i> Borrar</a
@@ -46,6 +54,7 @@
 						</div>
 					</td>
 				</tr>
+				{% endfor %}
 			</tbody>
 		</table>
 	</div>
