@@ -13,5 +13,5 @@ urlpatterns = [
     # path("libros/editar", views.editar_libro, name="editar"),
     path("eliminar/<int:id>", views.eliminar_libro, name="eliminar"),
     path("libros/editar/<int:id>", views.editar_libro, name="editar")
-    # Esta concatenación es  para que me cargue las imagenes
+    # Esta concatenación es  para que me cargue las imagenes viene desde setting
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

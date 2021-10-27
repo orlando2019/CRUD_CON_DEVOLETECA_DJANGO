@@ -24,9 +24,12 @@
 	</div>
 	<div class="col-12 help-text">{{campo.errors}}</div>
 	{% endfor %}
-	<div class="d-grid gap-2">
+	<div class="d-grid gap-2 d-md-block">
 		<button class="btn btn-success" type="submit">
 			<b> <i class="far fa-share-square"></i> Enviar Información </b>
 		</button>
+		<a name="" id="" class="btn btn-danger" href="{% url 'libros' %}" role="button"
+			><b><i class="fas fa-power-off"></i> Cancelar </b></a
+		>
 	</div>
 </form>
