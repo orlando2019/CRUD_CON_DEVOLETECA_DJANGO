@@ -21,3 +21,15 @@ sudo /opt/lampp/lampp start
 ## Para stop XAMMP ejecute en linux
 
 sudo /opt/lampp/lampp stop
+
+## Primero hacemos actualizamos las migracioes con el siguiente comando
+
+python manage.py makemigrations
+
+## Segundo realizamos las migraciones con el siguiente comando
+
+python manage.py migrate
+
+## Para crear un administrador superusuario
+
+python manage.py createsuperuser
