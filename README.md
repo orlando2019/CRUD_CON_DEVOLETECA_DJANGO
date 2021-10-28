@@ -40,4 +40,4 @@ python manage.py createsuperuser
 
 ## Version de Python
 
-Python 3.9.7
+Python==3.9.7
