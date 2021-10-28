@@ -14,6 +14,10 @@ python3 -m pip install -r requirements.txt
 
 pip freeze > requirements.txt
 
+## Comando para arrancar requirements.txt
+
+pip install -r requirements.txt
+
 ## Para Iniciar XAMMP ejecute en linux
 
 sudo /opt/lampp/lampp start
